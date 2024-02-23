@@ -28,6 +28,7 @@ let tirunelveli=document.getElementById("Tirunelveli");
 let tirupathur=document.getElementById("Tirupathur");
 let tiruppur=document.getElementById("Tiruppur");
 let tiruvallur=document.getElementById("Tiruvallur");
+let theni=document.getElementById("Theni");
 let tiruvannamalai=document.getElementById("Tiruvannamalai");
 let tiruvarur=document.getElementById("Tiruvarur");
 let vellore=document.getElementById("Vellore");
@@ -138,6 +139,9 @@ function search(){
     }
     else if(option.value=='Tiruvarur'){
         tiruvarur.style.display="block";
+    }
+    else if(option.value=='Theni'){
+        theni.style.display="block"
     }
     else if(option.value=='Vellore'){
         vellore.style.display="block";
