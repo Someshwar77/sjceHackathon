@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 85%;
 }
+
 body{
     background-image: url("https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg");
     background-size: cover;
@@ -15,6 +16,7 @@ body{
 }
 
 #submit-btn{
+    position: inherit;
     display: none;
 }
 
@@ -103,3 +105,15 @@ input[type=checkbox]{
 }
 
 
+@media(max-width:800px){
+    .section1 .preference{
+        width: 80%;
+        box-shadow: none;
+    }
+    .section1 .input{
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: none;
+
+    }
+}
