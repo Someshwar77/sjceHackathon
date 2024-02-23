@@ -1,0 +1,116 @@
+<section id="Perambalur" class="district container-fluid ">
+    <span id="Perambalur" class="row row-container d-flex flex-row justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </span>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="Salem" class="district container-fluid ">
+    <span id="Salem" class="row row-container d-flex flex-row justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Nature’s lap – Muttal</h5>
+                <p class="card-text">The Muttal Village is situated about 15km away from Attur in the Attur-Mullaivadi road, the waterfalls situated in the spot…</p></div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Sangagiri Fort</h5>
+                <p class="card-text">Sankagiri Fort is a historical fort maintained by the Archaeological Survey of India. It is located 22 km from the…</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Yercaud</h5>
+                <p class="card-text">YERCAUD : Yercaud is a hill station near Salem, in the Servarayan range of hills (anglicized as Shevaroys) in the Eastern…</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Kurumbapatti Zoo</h5>
+                <p class="card-text">Kurumbapatti Zoological Park: 12 km from Salem Bus stand. There is one a small zoological park with natural beautiful environmental…</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Mettur Dam</h5>
+                <p class="card-text">மேட்டூர் அணை – வரலாறு காவிரி ஆற்றின் குறுக்கே சேலம் மாவட்டம், மேட்டூரில் மேட்டூர் அணை 1925 ஆம் ஆண்டு துவங்கி  1934 ஆம் ஆண்டு கர்னல்…</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <input type="checkbox" name="" id="">
+                <h5 class="card-title">Temples & Masjids</h5>
+                <p class="card-text">Temples : Kandhasamy Kovil: 22 km from Salem on the way to Thiruchengode.Sundhara Kandhaswamy Kovil. One of the seven richest…</p>
+            </div>
+        </div>
+    </span>
+</section>

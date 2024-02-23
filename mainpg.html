@@ -1,0 +1,1206 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="mainpg.css">
+    <link rel="stylesheet" href="place.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Logo</h1>
+            <ul class="desktop-view">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mainpg.html">Main Page</a></li>
+                <li><a href="/direction_map/index.html">Map</a></li>
+                <li><a href="login.html">Login/SignUp</a></li>
+                <li>
+                    <select id="stateSelect">
+                        <option value="" disabled selected>Select a state</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option selected value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+
+                </li>
+                <li class="indLogo"></li>
+            </ul>
+            <nav class=" navbar-dark bg-dark" id="sidebar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="mobile-close btn-close btn-close-white"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="mobile-view">
+                                <li class="indLogo"></li>
+
+                                <li>
+                                    <select id="stateSelect">
+                                        <option value="" disabled selected>Select a state</option>
+                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                        <option value="Daman and Diu">Daman and Diu</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Ladakh">Ladakh</option>
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Puducherry">Puducherry</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option selected value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                </li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="mainpg.html">Main Page</a></li>
+                                <li><a href="/direction_map/index.html">Map</a></li>
+                                <li><a href="login.html">Login/SignUp</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+    </header>
+    <main class="main">
+        <section id="main" class="section1">
+            <div class="preference">
+                <div class="options">
+                    <input type="radio" id="radio1" name="radios">
+                    <label for="radio1" class="radio"><img src="/icons/flight.png" alt="Radio Image"></label>
+                    <h6 for="radio1">Flight</h6>
+                </div>
+                <div class="options">
+                    <input type="radio" id="radio2" name="radios">
+                    <label for="radio2" class="radio"><img src="/icons/bus.png" alt="Radio Image"></label>
+                    <h6 for="radio2">Bus</h6>
+                </div>
+                <div class="options">
+                    <input type="radio" id="radio3" name="radios">
+                    <label for="radio3" class="radio"><img src="icons/train.webp" alt="Radio Image"></label>
+                    <h6 for="radio3">Train</h6>
+                </div>
+                <div class="options">
+                    <input type="radio" id="radio4" name="radios">
+                    <label for="radio4" class="radio"><img src="/icons/car.png" alt="Radio Image"></label>
+                    <h6 for="radio4">Car</h6>
+                </div>
+            </div>
+            <div class="input">
+                <select class="districtSelect">
+                    <option value="">From</option>
+                    <option value="Ariyalur">Ariyalur</option>
+                    <option value="Chengalpattu">Chengalpattu</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Cuddalore">Cuddalore</option>
+                    <option value="Dharmapuri">Dharmapuri</option>
+                    <option value="Dindigul">Dindigul</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Kallakurichi">Kallakurichi</option>
+                    <option value="Kanchipuram">Kanchipuram</option>
+                    <option value="Kanyakumari">Kanyakumari</option>
+                    <option value="Karur">Karur</option>
+                    <option value="Krishnagiri">Krishnagiri</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Nagapattinam">Nagapattinam</option>
+                    <option value="Namakkal">Namakkal</option>
+                    <option value="Nilgiris">Nilgiris</option>
+                    <option value="Perambalur">Perambalur</option>
+                    <option value="Pudukkottai">Pudukkottai</option>
+                    <option value="Ramanathapuram">Ramanathapuram</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Sivaganga">Sivaganga</option>
+                    <option value="Tenkasi">Tenkasi</option>
+                    <option value="Thanjavur">Thanjavur</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Thoothukudi">Thoothukudi</option>
+                    <option value="Tiruchirappalli">Tiruchirappalli</option>
+                    <option value="Tirunelveli">Tirunelveli</option>
+                    <option value="Tirupathur">Tirupathur</option>
+                    <option value="Tiruppur">Tiruppur</option>
+                    <option value="Tiruvallur">Tiruvallur</option>
+                    <option value="Tiruvannamalai">Tiruvannamalai</option>
+                    <option value="Tiruvarur">Tiruvarur</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Viluppuram">Viluppuram</option>
+                    <option value="Virudhunagar">Virudhunagar</option>
+                </select>
+
+                <select class="districtSelect" id="toDistrict">
+                    <option value="">To</option>
+                    <option value="Ariyalur">Ariyalur</option>
+                    <option value="Chengalpattu">Chengalpattu</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Cuddalore">Cuddalore</option>
+                    <option value="Dharmapuri">Dharmapuri</option>
+                    <option value="Dindigul">Dindigul</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Kallakurichi">Kallakurichi</option>
+                    <option value="Kanchipuram">Kanchipuram</option>
+                    <option value="Kanyakumari">Kanyakumari</option>
+                    <option value="Karur">Karur</option>
+                    <option value="Krishnagiri">Krishnagiri</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Nagapattinam">Nagapattinam</option>
+                    <option value="Namakkal">Namakkal</option>
+                    <option value="Nilgiris">Nilgiris</option>
+                    <option value="Perambalur">Perambalur</option>
+                    <option value="Pudukkottai">Pudukkottai</option>
+                    <option value="Ramanathapuram">Ramanathapuram</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Sivaganga">Sivaganga</option>
+                    <option value="Tenkasi">Tenkasi</option>
+                    <option value="Thanjavur">Thanjavur</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Thoothukudi">Thoothukudi</option>
+                    <option value="Tiruchirappalli">Tiruchirappalli</option>
+                    <option value="Tirunelveli">Tirunelveli</option>
+                    <option value="Tirupathur">Tirupathur</option>
+                    <option value="Tiruppur">Tiruppur</option>
+                    <option value="Tiruvallur">Tiruvallur</option>
+                    <option value="Tiruvannamalai">Tiruvannamalai</option>
+                    <option value="Tiruvarur">Tiruvarur</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Viluppuram">Viluppuram</option>
+                    <option value="Virudhunagar">Virudhunagar</option>
+                </select>
+                <input type="tel" name="" id="" placeholder="No of People">
+            </div>
+            <div class="btn1">
+                <button class="btn btn-primary btn-lg" onclick="search()" type="submit">Search</button>
+            </div>
+        </section>
+
+        <section class="main2">
+            <section id="Ariyalur" class="district container-fluid ">
+                <span id="Ariyalur" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">KARAIVETTI BIRD SANCTUARY</h5>
+                            <p class="card-text">VETTAKUDI – KARAIVETTI BIRD SANCTUARY The Karaivetti Birds Sanctuary
+                                with an area of 453.71 ha. has been notified under section…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">GANGAIKONDA CHOLAPURAM</h5>
+                            <p class="card-text">Ariyalur is best known for the Gangaikondacholisvarar temple in
+                                Gangaikondacholapuram, the biggest temple constructed during the reign of Rajendra–I in…
+                            </p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Chengalpattu" class="district container-fluid ">
+                <span id="Chengalpattu" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chengalpattu/vedanthangal.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Vedanthangal Bird Sanctuary</h5>
+                            <p class="card-text">It is one of the major Water Bird Sanctuaries in India. of 25 Kms from
+                                Chengalpattu. The birds nest on…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chengalpattu/mamallapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Mamallapuram</h5>
+                            <p class="card-text">Mamallapuram The Ancient Port City Mamalapuram (Mahabalipuram) is one
+                                of the important place to visit in Chengalpattu District. It was…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Chennai" class="district container-fluid ">
+
+                <span id="Chennai" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chennai/Valluvar_Kottam.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Valluvar Kottam</h5>
+                            <p class="card-text">The Valluvar Kottam, located in Chennai, is one such historical
+                                monument which is dedicated to the well-known intellectual poet, philosopher…</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chennai/gandhi mandabam.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Gandhi Mandapam</h5>
+                            <p class="card-text">The Government of Tamil Nadu has established Gandhi Mandapam and Museum
+                                in Guindy, Chennai as a symbol of praising and…</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chennai/government museum.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Government Museum</h5>
+                            <p class="card-text">Government Museum, Chennai Location: Pantheon Road, Egmore, Chennai,
+                                Tamil Nadu Established in 1851, Government Museum of Chennai is popular as…</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/chennai/marina beach.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Marina Beach</h5>
+                            <p class="card-text">Marina beach in Chennai along the Bay of Bengal is India’s longest and
+                                world’s second longest beach. This predominantly sandy…</p>
+                        </div>
+                    </div>
+
+                </span>
+            </section>
+
+            <section id="Coimbatore" class="district container-fluid ">
+                <span id="Coimbatore" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/coimbatore/vaalparai hill station 2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Valparai Hill Station</h5>
+                            <p class="card-text">Valparai Hill station is located above 3500 feet height from the sea
+                                level on the Anamalai mountain range of the…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/coimbatore/aliyar dam.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Aliyar Dam</h5>
+                            <p class="card-text">Aliyar Dam is a charming location surrounded by Annamali Hills with
+                                wonderful natural views. It is located between Pollachi and…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/coimbatore/kovai courtralam falls.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">DamKovai Coutralam</h5>
+                            <p class="card-text">Kovai Kutralam is a scenic spot with a gentle waterfall originating on
+                                the Siruvani hill ranges. It is located on…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Dharmapuri" class="district container-fluid ">
+                <span id="Dharmapuri" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/dharmapuri/theerthamalai.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Theerthamalai</h5>
+                            <p class="card-text">Theerthamalai is an important scacred place in Harur taluk of
+                                Dharmapuri District. Shri Theerthagirishwarar Temple is located at the top of…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/dharmapuri/hogenakkal.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Hogenakkal Water Falls</h5>
+                            <p class="card-text">Hogenakal is situated at the borders of Karnataka at 46 kms from
+                                Dharmapuri. In Hogenakal the river Cauvery enters into…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Erode" class="district container-fluid ">
+                <span id="Erode" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Government Museum, Erode</h5>
+                            <p class="card-text">Address: Curator, Government Museum, V.O.C.Park Campus, Erode – 638
+                                003. Erode Government Museum will appeal to culture buffs and history…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Birds Sanctuary, Vellode</h5>
+                            <p class="card-text">Birds Sanctuary, Vellode is about 15 kms from Erode. It is at a large
+                                lake surrounded with semi-dark bushes near…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Dams</h5>
+                            <p class="card-text">Bhavanisagar Dam is about 16 kms. from Sathyamangalam across the river
+                                Bhavani.Kodiveri Dam is about 10 kms from Gobichettipalayam and…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Bannari Amman Temple</h5>
+                            <p class="card-text">Bannari Amman Temple is 75 kms away from Erode and 10 kms distance from
+                                Sathyamangalam. It is the famous temple…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/To.main2:last-child{
+                        display: none;
+                    }orist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Murugan Temples</h5>
+                            <p class="card-text">Thindalmalai – is 5 kms from Erode Chennimalai – is about 30 kms. from
+                                Erode and 12 kms from Perundurai</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Bhavani Sangameshwarar Temple</h5>
+                            <p class="card-text">Sangameshwarar Temple, Bhavani is about 15 kms. from Erode. Confluence
+                                of three rivers by name Cauvery, Bhavani and invisible Amudha…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+
+            <section id="Salem" class="district container-fluid ">
+                <span id="Salem" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Nature’s lap – Muttal</h5>
+                            <p class="card-text">The Muttal Village is situated about 15km away from Attur in the
+                                Attur-Mullaivadi road, the waterfalls situated in the spot…</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Sangagiri Fort</h5>
+                            <p class="card-text">Sankagiri Fort is a historical fort maintained by the Archaeological
+                                Survey of India. It is located 22 km from the…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Yercaud</h5>
+                            <p class="card-text">YERCAUD : Yercaud is a hill station near Salem, in the Servarayan range
+                                of hills (anglicized as Shevaroys) in the Eastern…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Kurumbapatti Zoo</h5>
+                            <p class="card-text">Kurumbapatti Zoological Park: 12 km from Salem Bus stand. There is one
+                                a small zoological park with natural beautiful environmental…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Mettur Dam</h5>
+                            <p class="card-text">மேட்டூர் அணை – வரலாறு காவிரி ஆற்றின் குறுக்கே சேலம் மாவட்டம்,
+                                மேட்டூரில் மேட்டூர் அணை 1925 ஆம் ஆண்டு துவங்கி 1934 ஆம் ஆண்டு கர்னல்…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Temples & Masjids</h5>
+                            <p class="card-text">Temples : Kandhasamy Kovil: 22 km from Salem on the way to
+                                Thiruchengode.Sundhara Kandhaswamy Kovil. One of the seven richest…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Sivaganga" class="district container-fluid ">
+                <span id="Sivaganga" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Vettangudi Bird Sanctuary</h5>
+                            <p class="card-text">Vettangudi Bird Sanctuary is near Thirupathur and Madurai. The
+                                Vettangudi Bird Sanctuary is located at a distance of 51 kms…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Pillayarpatti Temple</h5>
+                            <p class="card-text">Karpaga Vinayagar Temple is one of the oldest Cave Temples (Rock Cut)
+                                of Tamilnadu and situated at Pillayarpatti, Which is…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+
+            <section id="Tenkasi" class="district container-fluid ">
+                <span id="Tenkasi" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Thirumalaikumaraswamy Thirukkoil Panpozhi</h5>
+                            <p class="card-text">It is believed that Kaviaramalai, a place ruled by feudal ruler of
+                                Sangam Age, Aiy Andiran is this place Saint…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Sankaranarayana Swamy Thirukkoil, Sankarankovil</h5>
+                            <p class="card-text">Lord Shiva, the paramount God of Saivism and Lord Vishnu, the Superior
+                                God of Vaishnavism conjoin together in a same…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Kutraalanatha Swamy Thirukkoil Kutraalam</h5>
+                            <p class="card-text">Antiquity of this temple can be traced in Sangam Age Tamil Literature.
+                                It is believed that Sage Agastiyar had converted…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Coutrallam</h5>
+                            <p class="card-text">Courtallam is situated at the Western Ghats in Tenkasi District. The
+                                famous waterfalls on rocks and tiny droplets are sprinkled…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Dindigul" class="district container-fluid ">
+                <span id="Dindigul" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Sirumalai</h5>
+                            <p class="card-text">Sirumalai is a region of 60,000 acres (200 kms) situated 25 km (16
+                                miles) from Dindigul and 40 km 25…</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Soundararaja Perumal Temple, Thadikombu</h5>
+                            <p class="card-text">Thadikombu Perumal Temple is located on the Dindigul- Karur route about
+                                18 kms away from Dindigul</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Dhandayuthapani Swamy Temple, Palani</h5>
+                            <p class="card-text">Palani Arulmigu Shri Dhandayuthapani temple is one of the Six Abodes of
+                                Murugan</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Kodaikanal</h5>
+                            <p class="card-text">Kodaikanal is one of the very popular holiday destination hill resorts
+                                in South India.</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Kallakurichi" class="district container-fluid ">
+                <span id="Kallakurichi" class="row row-container d-flex flex-row justify-content-center">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Sri Veeratteswarar Koil, Thirukkoilur</h5>
+                            <p class="card-text">Moolavar : Veeratteswarar Utshavar : Anthakashuvath Moorthy Ambal :
+                                Periya Nayagi, Shivanathavalli Holy Tree : Sarakkontrai Holy Water : Thenpennai…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Aadhi Thiruvarangam</h5>
+                            <p class="card-text">Main Deity : Ranganatha Swamy(Lord Vishnu). Ambal : Rangavalli Thayar.
+                                Holy Water : Chandra Pushkarani, Thenpennai river. Temple Timings :…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/gangaikonda cholapuram.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Kalvarayan Hills</h5>
+                            <p class="card-text">The Kalrayan Hills are a major range of hills situated in the Eastern
+                                Ghats of the southern Indian state of…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Kanchipuram" class="district container-fluid ">
+                <span id="Kanchipuram" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">ARIGNAR ANNA ILLAM</h5>
+                            <p class="card-text">Anna memorial is located at a distance of 3kms from Kancheepuram Bus
+                                Station and 3kms from Kancheepuram Railway station. Anna memorial is situated in Vishnu
+                                Kanchi. Dr. C. N. Annadurai the former Chief Minister of Tamilnadu</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Karur" class="district container-fluid ">
+                <span id="Karur" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Sadasiva Brahmendral Adhistanam, Nerur</h5>
+                            <p class="card-text">Arulmigu Sadasiva Brahmendra Adhishtanam and Arulmigu Kashi Vishwanatha
+                                temple are located at Nerur Village (13 KM from Karur-Thirumukkudalur Road), Karur
+                                district.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Ponnaniyar Dam</h5>
+                            <p class="card-text">A picnic spot located near Pooncholai village of Kadavoor hill region
+                                in Karur district is known as Ponnaniar Dam</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Krishnagiri" class="district container-fluid ">
+                <span id="Krishnagiri" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">KATTUVEERA ANJANEYA TEMPLE</h5>
+                            <p class="card-text">Kattuveera Anjaneya Temple is located at Krishnagiri in Tamil Nadu is
+                                said to be 2500 years old and this Anjaneya here ensures that the one wish which one
+                                pray with full devotion is said to come true, within 3 months.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">SHREE PARSHWA PADMAVATHE SHAKTIPEET TIRTH DHAM (Jain temple)</h5>
+                            <p class="card-text">Jain dharma consists of 24 theerthankars, In these 24 theerthankars the
+                                23rd theerthankar is considered to be swami parshwanathbhagwan. Today shaktipeet is the
+                                world’s highest (365 ft height) Jain temple adorning images of the Tirthankar Arihanta
+                                Paramatmans.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">THALLY GARDEN AND LAKE (LITTLE ENGLAND)</h5>
+                            <p class="card-text">Jain dharma consists of 24 theerthankars, In these 24 theerthankars the
+                                23rd theerthankar is considered to be swami parshwanathbhagwan. </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">AIYUR (ECO TOURISM PARK)</h5>
+                            <p class="card-text">Aiyur reserve forest is located 20 kms from Denkanikottai thaluk,
+                                Krishnagiri District. Eco tourism park is located 1060 mts above the sea level in
+                                western Ghats region. Forest department has created.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">KRISHNAGIRI MUSEUM</h5>
+                            <p class="card-text">Krishnagiri Museum is located near Apsara Theatre on Gandhi Road. It
+                                was opened as 12th District Museum in the year</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">CHANDRA CHOODASWARAR TEMPLE</h5>
+                            <p class="card-text">Chandra choodeswarar temple (lord siva temple) is famous for its hill
+                                temple where presiding deity lord Siva is Arul migu…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">KELLAVARAPALLI DAM PARK</h5>
+                            <p class="card-text">Kellavarapalli dam is located 10 kms from Hosur, 60 kms from
+                                Krishnagiri it is constructed in the year 1995 it is only 8 kms from Karnataka state
+                                this dam park become a picnic spot from citizen of hosur area</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">AVATHANAPATTI LAKE AND CHILDREN PARK</h5>
+                            <p class="card-text">Avathanapatti lake is located 5 km away from Krishnagiri town its found
+                                salem Bangalore national highways NH7.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">KRISHNAGIRI DAM PARK</h5>
+                            <p class="card-text">Krishnagiri dam is located in between Dharmapuri and Krishnagiri 10 kms
+                                away from Krishnagiri and river thenpennai is supplying water.</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Madurai" class="district container-fluid ">
+                <span id="Madurai" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Thirumalai Nayak Palace </h5>
+                            <p class="card-text">About 1.5 Kms from the Meenakshi temple, this palace was built in 1636
+                                by the ruler whose name it bears. The imposing edifice is famous for the “Stuccowork” on
+                                its domes and impressive arches. The Sorgavilasam (Celestial Pavilion), measuring 75m x
+                                52m, constructed entirely of brick and mortar without the support of a single rafter or
+                                girder, is a marvel of Indo-Saracenic architectural styl</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Thirupparankundram Temple </h5>
+                            <p class="card-text">One of the six special abodes dedicated to Lord Murugan or Lord
+                                Subrahmanya is located 8 Kms South of Madurai. The importance of this temple is that the
+                                marriage of Lord Subrahmanya with Devayanai, the daughter of Indra, was celebrated here.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Sri Meenakshi - Sundareswarar Temple</h5>
+                            <p class="card-text">Synonymous with Madurai is the Meenakshi Sundareswarar twin Temple, the
+                                pivot around which the city has evolved. The Meenakshi Temple complex is literally a
+                                city - one of the largest of its kind in India and undoubtedly one of the oldest too.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Madurai Gandhi Museum</h5>
+                            <p class="card-text">Gandhi Museum is housed in the old Palace of Rani Mangammal, the Gandhi
+                                Museum depicts the highlights of the freedom struggle and contains a picture gallery of
+                                the Gandhian movement. Also can be seen are a gallery of relics, Khadi and village
+                                industries section and South Indian Handicrafts section. </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Azhagar Kovil</h5>
+                            <p class="card-text">About 21 Kms North East of Madurai, stands a celebrated Vishnu Temple
+                                dedicated to Lord Alagar. The temple is situated on a hill amidst panoramic
+                                surroundings. The shrine is know as Alagarkoil and the hill , Solaimalai. </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Mariamman Teppakulam</h5>
+                            <p class="card-text">Mariamman Teppakulam is a beautiful square tank spread over a huge area
+                                of almost 16 acres, located about 4 Kms East of Meenakshi Temple in Madurai City. The
+                                tank is the scene of the colourful float festival held in January/February to celebrate
+                                the birth anniversary of King Thirumalai Nayak, who built this tank.</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Nagapattinam" class="district container-fluid ">
+                <span id="Nagapattinam" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Velankanni</h5>
+                            <p class="card-text"> Velankanni is one of the most visited pilgrim centres in India. It is
+                                a town situated on the shores of Bay of Bengal. This renowned shrine Basilica of our
+                                Lady of health draws pilgrims from all over the world</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Tharangambadi</h5>
+                            <p class="card-text">It is 35kms north of Nagapattnam on the east coastal line of Bay of
+                                Bengal. Danish Architexture is the attractions of Tranguebar. Bus facilities are
+                                available to this place from Nagapattinam, Mayiladuthurai, Poompuhar, Sirkali and
+                                Chidambaram.</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Namakkal" class="district container-fluid ">
+                <span id="Namakkal" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Namagiri Amman Temple</h5>
+                            <p class="card-text"> A Temple dedicated to the Goddess Namagiri Amman. It is situated
+                                within the temple complex of the Narasimha Swamy kovil….</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Namakkal Anjaneyar Temple</h5>
+                            <p class="card-text">Namakkal Anjaneyar temple is located in Namakkal, a town in Namakkal
+                                district. It is dedicated to the Hindu god Hanuman….</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arthanareeswarar temple Tiruchengode</h5>
+                            <p class="card-text">Tiruchengode is 35 km from Namakkal. It is one of the seven
+                                Sivasthalams in Kongunadu. The Arthanareeswarar Temple is located…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Kolli Hills</h5>
+                            <p class="card-text">Kollimalai Hills are situated on Eastern Ghats at an altitude of 1200
+                                mts in the Namakkal District and are 45…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Jedarpalayam Dam</h5>
+                            <p class="card-text">Jedarpalayam Dam is located in Kabilarmalai Panchayat Union of Namakkal
+                                District. It is located about 36 kms from Namakkal. The…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Namakkal Fort</h5>
+                            <p class="card-text">The Rock Fort in Namakkal is a special feature of the Town. The Fort
+                                covers an area of one and…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Nilgiris" class="district container-fluid ">
+                <span id="Nilgiris" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Tribal Museum</h5>
+                            <p class="card-text">The Tribal Museum is located within the Tribal Research Centre campus
+                                Udhagamndalam, Nilgiri district, Tamil Nadu. The foundation stone for…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Mudumalai Tiger Reserve</h5>
+                            <p class="card-text">This is the first Sanctuary to be set up in India and forms part of the
+                                Jawharlal Nehru National Park….</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Sims Park – Coonoor</h5>
+                            <p class="card-text">This unusual park-cum-botanical garden was developed around the natural
+                                contours of the land more than a hundred years ago., Ethnic…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Pykara – Ooty</h5>
+                            <p class="card-text">The Pykara is the largest river in the District. It is considered very
+                                sacred by the Todas. The Pykara river…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Avalanche – Ooty</h5>
+                            <p class="card-text">Travel 28 kms from Ooty town past the Emerald Lake surrounded by
+                                undisturbed forest and you have reached Avalanche. It…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Glenmorgan – Ooty</h5>
+                            <p class="card-text">At 35 km North west of Ooty is situated Glenmorgan, which was then very
+                                famous for the Tea estate. The…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Lamb’s rock – Coonoor</h5>
+                            <p class="card-text">Lamb’s rock is perhaps the most favorite place for picnic parties near
+                                Coonoor. It is a point on the way…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Dolphin’s Nose – Coonoor</h5>
+                            <p class="card-text">It is about 12 kms. from Coonoor bus stand situated near Tiger Hills.
+                                It is unique rock of tremendous proportions,…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Raj Bhavan – Ooty</h5>
+                            <p class="card-text">Government House (Raj Bhavan) is situated on a ridge of the Western
+                                Slopes of Doddabetta on the outskirts of the…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Doddabetta – Ooty</h5>
+                            <p class="card-text">At 2,623 mts above MSL, Doddabetta is the highest Peak in the Tamil
+                                Nadu and is about 10 kms. from…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Perambalur" class="district container-fluid ">
+                <span id="Perambalur" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Siruvachur MathuraKaliaman Temple</h5>
+                            <p class="card-text">Temple History The renowned temple of Arulmigu Mathura Kaliamman at
+                                Siruvachur located 50 kms from Trichy and 8 kms from…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Ekampareshwarar and Thandayudhapani Temple</h5>
+                            <p class="card-text">God : Arulmigu Ekampareshwarar and Thandayudhapani Temple. Goddess :
+                                Kamatchi Amman. Holy pond : Panchanadi Theertha pond. Holy Tree :…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">NATIONAL FOSSIL WOOD PARK, SATTANUR</h5>
+                            <p class="card-text">Geological study shows that more than 120,000,000 years ago, the sea
+                                (which lies today about 100 k.m. East of Sathanur)…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Ranjankudi Fort</h5>
+                            <p class="card-text">Ranjankudi Fort is a 17th-century fortress located about 22 km (14mi)
+                                north of the town of Perambalur,Tamil Nadu India. The…</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+
+            <section id="Ramanathapuram" class="district container-fluid ">
+                <span id="Ramanathapuram" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Ramanathaswamy Temple</h5>
+                            <p class="card-text">The Holy abode of the Hindu God, Shri Ram (addressed so with all
+                                respect & humility) is a virtual paradise…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Thiru Uthirakosamangai</h5>
+                            <p class="card-text">18 KMs from Ramanathapuram is Uthirakosamangai. There is an ancient
+                                Siva temple, where the presiding deity is carved in Emerald….</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Pamban Bridge</h5>
+                            <p class="card-text">The 2.2 km. length bridge connecting the Rameswaram Island and the
+                                mainland is the longest bridge in India constructed over…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Devipattinam (Nava Bashanam)</h5>
+                            <p class="card-text">A coastal village is also known as Navashabashanam. It is believed that
+                                Lord Rama worshiped Navagraha here. The temple near…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Dhanushkodi</h5>
+                            <p class="card-text">The southernmost tip of the rameswaram island is called Dhanushkodi. It
+                                was completely washed away by a cyclone in 1964….</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Dr. APJ Abdul Kalam’s Memorial</h5>
+                            <p class="card-text">Avul Pakir Jainulabdeen Abdul Kalam, better known as A. P. J. Abdul
+                                Kalam who was the 11th president of India….</p>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <section id="Tenkasi" class="district container-fluid ">
+                <span id="Tenkasi" class="row row-container d-flex flex-row justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Thirumalaikumaraswamy Thirukkoil Panpozhi</h5>
+                            <p class="card-text">It is believed that Kaviaramalai, a place ruled by feudal ruler of
+                                Sangam Age, Aiy Andiran is this place Saint…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Sankaranarayana Swamy Thirukkoil, Sankarankovil</h5>
+                            <p class="card-text">Lord Shiva, the paramount God of Saivism and Lord Vishnu, the Superior
+                                God of Vaishnavism conjoin together in a same…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Arulmigu Kutraalanatha Swamy Thirukkoil Kutraalam</h5>
+                            <p class="card-text">Antiquity of this temple can be traced in Sangam Age Tamil Literature.
+                                It is believed that Sage Agastiyar had converted…</p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="/Toorist img/ariyalur/karaivetti bird sanctuary.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="checkbox" name="" id="">
+                            <h5 class="card-title">Coutrallam</h5>
+                            <p class="card-text">Courtallam is situated at the Western Ghats in Tenkasi District. The
+                                famous waterfalls on rocks and tiny droplets are sprinkled…</p>
+                        </div>
+                    </div>
+
+
+
+                    <button id="submit-btn" class=" btn btn-primary">Submit</button>
+
+            </section>
+
+
+
+
+    </main>
+
+
+    <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js'></script>
+    <!-- Script JS -->dindigul
