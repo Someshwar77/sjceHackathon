@@ -169,10 +169,10 @@ li a{
     
 }
 
-/* 
+
 @media (prefers-color-scheme: dark) {
     *{
         background-color: black;
         color: aliceblue;
     }
-} */
+}
