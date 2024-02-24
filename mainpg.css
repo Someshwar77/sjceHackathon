@@ -125,6 +125,9 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 800px) {
+  *{
+    border-radius: 8px;
+  }
   .section1 .preference {
     width: 80%;
     box-shadow: none;
