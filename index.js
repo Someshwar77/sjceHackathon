@@ -41,6 +41,7 @@ let fromDistrict = document.getElementById("fromDistrict");
 let toDistrict = document.getElementById("toDistrict");
 let district = document.getElementById("district");
 let submitBtn = document.getElementById("submit-btn");
+let noOfPeople=document.getElementById("NoOfPeople");
 
 async function getLocation(loc) {
   var location = loc;
@@ -101,7 +102,7 @@ async function search() {
   );
   let cost = Math.floor(Number(km));
   console.log(cost * 2 + "Rupees");
-  document.getElementById("rupee").textContent = cost * 2 + "Rupee";
+  document.getElementById("rupee").textContent = cost * 2*noOfPeople.value + "Rupee";
 
   console.log(option.value);
   main.style.display = "none";

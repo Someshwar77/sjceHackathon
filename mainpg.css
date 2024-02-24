@@ -37,9 +37,9 @@ body {
   justify-content: center;
   height: 100%;
 }
-#price span h3{
-    font-size: 5em;
-    color: green;
+#price span h3 {
+  font-size: 5em;
+  color: green;
 }
 
 .preference {
@@ -67,9 +67,11 @@ input:focus {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .districtSelect {
-  width: 100%;
+  width: 50%;
   height: 80px;
 }
 
