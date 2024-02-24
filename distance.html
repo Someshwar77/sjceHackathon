@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Calculator</title>
+</head>
+<body>
+    <h1>Distance Calculator</h1>
+    <label for="latitude1Input">Latitude 1:</label>
+    <input type="number" id="latitude1Input">
+    <label for="longitude1Input">Longitude 1:</label>
+    <input type="number" id="longitude1Input"><br><br>
+    <label for="latitude2Input">Latitude 2:</label>
+    <input type="number" id="latitude2Input">
+    <label for="longitude2Input">Longitude 2:</label>
+    <input type="number" id="longitude2Input"><br><br>
+    <button onclick="calculateDistance()">Calculate Distance</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateDistance() {
+            var lat1 = parseFloat(document.getElementById('latitude1Input').value);
+            var lon1 = parseFloat(document.getElementById('longitude1Input').value);
+            var lat2 = parseFloat(document.getElementById('latitude2Input').value);
+            var lon2 = parseFloat(document.getElementById('longitude2Input').value);
+
+            if (isNaN(lat1) || isNaN(lon1) || isNaN(lat2) || isNaN(lon2)) {
+                document.getElementById('result').innerText = "Please enter valid latitude and longitude values.";
+                return;
+            }
+
+            var R = 6371; // Radius of the earth in km
+            var dLat = deg2rad(lat2 - lat1); // deg2rad below
+            var dLon = deg2rad(lon2 - lon1);
+            var a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2)
+                ;
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var distance = R * c; // Distance in km
+            document.getElementById('result').innerText = "Distance: " + distance.toFixed(2) + " km";
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180)
+        }
+    </script>
+</body>
+</html>

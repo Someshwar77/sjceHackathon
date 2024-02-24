@@ -141,6 +141,9 @@
             </nav>
         </nav>
     </header>
+
+
+    
     <main class="main">
         
         <section id="main" class="section1">
@@ -167,7 +170,7 @@
                 </div>
             </div>
             <div class="input">
-                <select class="districtSelect">
+                <select class="districtSelect" id="fromDistrict">
                     <option value="">From</option>
                     <option value="Ariyalur">Ariyalur</option>
                     <option value="Chengalpattu">Chengalpattu</option>
@@ -249,7 +252,7 @@
                 <input type="tel" name="" id="" placeholder="No of People">
             </div>
             <div class="btn1">
-                <button class="btn btn-primary btn-lg" onclick="search()" type="submit">Search</button>
+                <button class="btn btn-primary btn-lg" onclick="search() " type="submit">Search</button>
             </div>
         </section>
 
@@ -1452,7 +1455,13 @@
     </span>
 </section>
 
-                    <button id="submit-btn" class=" btn btn-primary">Submit</button>
+<section id="price">
+    <span>
+        <h3 id="rupee"></h3>
+    </span>
+</section>
+
+                    <button id="submit-btn" onclick="price()" class=" btn btn-primary">Submit</button>
 
 
 
@@ -1460,6 +1469,7 @@
     </main>
 
     <script src="/index.js"></script>
+    <script src="/calculate.js"></script>
 
     <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js'></script>
