@@ -4,16 +4,17 @@
   height: 85%;
 }
 
-
 body {
   background-image: url("https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .main2 {
   display: flex;
   flex-direction: row;
   padding-bottom: 70px;
+
 }
 
 #submit-btn {
@@ -25,6 +26,7 @@ body {
 }
 
 #price {
+  height: 100vh;
   display: none;
 }
 

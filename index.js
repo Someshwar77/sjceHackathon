@@ -65,23 +65,26 @@ async function getLocation(loc) {
 }
 
 function distance(lat1, lon1, lat2, lon2) {
-    // Convert latitude and longitude from degrees to radians
-    const R = 6371.0; // Radius of the Earth in kilometers
+  // Convert latitude and longitude from degrees to radians
+  const R = 6371.0; // Radius of the Earth in kilometers
 
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distance = R * c;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c;
 
-    return distance;
+  return distance;
 }
 
 // Example coordinates for New York City and Los Angeles
 const lat1 = 40.7128;
-const lon1 = -74.0060; // New York City
+const lon1 = -74.006; // New York City
 const lat2 = 34.0522;
 const lon2 = -118.2437; // Los Angeles
 
@@ -89,135 +92,140 @@ async function search() {
   console.log(fromDistrict.value);
   let fromLatLong = await getLocation(fromDistrict.value);
   let toLatLong = await getLocation(toDistrict.value);
-  console.log(fromLatLong,toLatLong)
-  let km=distance(fromLatLong.latitude,fromLatLong.longitude, toLatLong.latitude,toLatLong.longitude);
-  let cost=Math.floor(Number(km));
-  console.log(cost*2+"Rupees");
+  console.log(fromLatLong, toLatLong);
+  let km = distance(
+    fromLatLong.latitude,
+    fromLatLong.longitude,
+    toLatLong.latitude,
+    toLatLong.longitude
+  );
+  let cost = Math.floor(Number(km));
+  console.log(cost * 2 + "Rupees");
+  document.getElementById("rupee").textContent = cost * 2 + "Rupee";
 
   console.log(option.value);
   main.style.display = "none";
   submitBtn.style.display = "block";
 
-
-    switch (option.value) {
-        case "Ariyalur":
-            ariyalur.style.display = "block";
-            break;
-        case "Chennai":
-            chennai.style.display = "block";
-            break;
-        case "Chengalpattu":
-            chengalpattu.style.display = "block";
-            break;
-        case "Chidambaram":
-            chidambaram.style.display = "block";
-            break;
-        case "Coimbatore":
-            coimbatore.style.display = "block";
-            break;
-        case "Cuddalore":
-            cuddalore.style.display = "block";
-            break;
-        case "Dharmapuri":
-            dharmapuri.style.display = "block";
-            break;
-        case "Dindigul":
-            dindigul.style.display = "block";
-            break;
-        case "Erode":
-            erode.style.display = "block";
-            break;
-        case "Kallakurichi":
-            kallakurichi.style.display = "block";
-            break;
-        case "Kancheepuram":
-            kancheepuram.style.display = "block";
-            break;
-        case "Kanyakumari":
-            kanyakumari.style.display = "block";
-            break;
-        case "Karur":
-            karur.style.display = "block";
-            break;
-        case "Krishnagiri":
-            krishnagiri.style.display = "block";
-            break;
-        case "Madurai":
-            madurai.style.display = "block";
-            break;
-        case "Nagapattinam":
-            nagapattinam.style.display = "block";
-            break;
-        case "Namakkal":
-            namakkal.style.display = "block";
-            break;
-        case "Nilgiris":
-            nilgiris.style.display = "block";
-            break;
-        case "Perambalur":
-            perambalur.style.display = "block";
-            break;
-        case "Pudukkottai":
-            pudukkottai.style.display = "block";
-            break;
-        case "Ramanathapuram":
-            ramanathapuram.style.display = "block";
-            break;
-        case "Salem":
-            salem.style.display = "block";
-            break;
-        case "Sivaganga":
-            sivaganga.style.display = "block";
-            break;
-        case "Tenkasi":
-            tenkasi.style.display = "block";
-            break;
-        case "Thanjavur":
-            thanjavur.style.display = "block";
-            break;
-        case "Theni":
-            theni.style.display = "block";
-            break;
-        case "Thoothukudi":
-            thoothukudi.style.display = "block";
-            break;
-        case "Tiruchirappalli":
-            tiruchirappalli.style.display = "block";
-            break;
-        case "Tirunelveli":
-            tirunelveli.style.display = "block";
-            break;
-        case "Tirupattur":
-            tirupattur.style.display = "block";
-            break;
-        case "Tiruppur":
-            tiruppur.style.display = "block";
-            break;
-        case "Tiruvallur":
-            tiruvallur.style.display = "block";
-            break;
-        case "Tiruvannamalai":
-            tiruvannamalai.style.display = "block";
-            break;
-        case "Tiruvarur":
-            tiruvarur.style.display = "block";
-            break;
-        case "Vellore":
-            vellore.style.display = "block";
-            break;
-        case "Viluppuram":
-            viluppuram.style.display = "block";
-            break;
-        case "Virudhunagar":
-            virudhunagar.style.display = "block";
-            break;
-        default:
-            console.log("Invalid district selected.");
-    }
+  switch (option.value) {
+    case "Ariyalur":
+      ariyalur.style.display = "block";
+      break;
+    case "Chennai":
+      chennai.style.display = "block";
+      break;
+    case "Chengalpattu":
+      chengalpattu.style.display = "block";
+      break;
+    case "Chidambaram":
+      chidambaram.style.display = "block";
+      break;
+    case "Coimbatore":
+      coimbatore.style.display = "block";
+      break;
+    case "Cuddalore":
+      cuddalore.style.display = "block";
+      break;
+    case "Dharmapuri":
+      dharmapuri.style.display = "block";
+      break;
+    case "Dindigul":
+      dindigul.style.display = "block";
+      break;
+    case "Erode":
+      erode.style.display = "block";
+      break;
+    case "Kallakurichi":
+      kallakurichi.style.display = "block";
+      break;
+    case "Kancheepuram":
+      kancheepuram.style.display = "block";
+      break;
+    case "Kanyakumari":
+      kanyakumari.style.display = "block";
+      break;
+    case "Karur":
+      karur.style.display = "block";
+      break;
+    case "Krishnagiri":
+      krishnagiri.style.display = "block";
+      break;
+    case "Madurai":
+      madurai.style.display = "block";
+      break;
+    case "Nagapattinam":
+      nagapattinam.style.display = "block";
+      break;
+    case "Namakkal":
+      namakkal.style.display = "block";
+      break;
+    case "Nilgiris":
+      nilgiris.style.display = "block";
+      break;
+    case "Perambalur":
+      perambalur.style.display = "block";
+      break;
+    case "Pudukkottai":
+      pudukkottai.style.display = "block";
+      break;
+    case "Ramanathapuram":
+      ramanathapuram.style.display = "block";
+      break;
+    case "Salem":
+      salem.style.display = "block";
+      break;
+    case "Sivaganga":
+      sivaganga.style.display = "block";
+      break;
+    case "Tenkasi":
+      tenkasi.style.display = "block";
+      break;
+    case "Thanjavur":
+      thanjavur.style.display = "block";
+      break;
+    case "Theni":
+      theni.style.display = "block";
+      break;
+    case "Thoothukudi":
+      thoothukudi.style.display = "block";
+      break;
+    case "Tiruchirappalli":
+      tiruchirappalli.style.display = "block";
+      break;
+    case "Tirunelveli":
+      tirunelveli.style.display = "block";
+      break;
+    case "Tirupattur":
+      tirupattur.style.display = "block";
+      break;
+    case "Tiruppur":
+      tiruppur.style.display = "block";
+      break;
+    case "Tiruvallur":
+      tiruvallur.style.display = "block";
+      break;
+    case "Tiruvannamalai":
+      tiruvannamalai.style.display = "block";
+      break;
+    case "Tiruvarur":
+      tiruvarur.style.display = "block";
+      break;
+    case "Vellore":
+      vellore.style.display = "block";
+      break;
+    case "Viluppuram":
+      viluppuram.style.display = "block";
+      break;
+    case "Virudhunagar":
+      virudhunagar.style.display = "block";
+      break;
+    default:
+      console.log("Invalid district selected.");
+  }
 }
 
-
-function price(){
-    document.getElementById("submit-btn").style.display="none";
-    document.getElementById("price").style.display="block";
+function price() {
+  document.querySelector(".main2").style.display = "none";
+  document.getElementById("submit-btn").style.display = "none";
+  document.getElementById("price").style.display = "block";
 }
