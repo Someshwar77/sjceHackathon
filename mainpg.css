@@ -129,6 +129,9 @@ input[type="checkbox"] {
     width: 80%;
     box-shadow: none;
   }
+  .districtSelect{
+    width: 100%;
+  }
   .section1 .input {
     flex-direction: column;
     gap: 10px;

@@ -102,7 +102,7 @@ async function search() {
   );
   let cost = Math.floor(Number(km));
   console.log(cost * 2 + "Rupees");
-  document.getElementById("rupee").textContent = cost * 2*noOfPeople.value + "Rupee";
+  document.getElementById("rupee").textContent = cost * 2*noOfPeople.value + "₹";
 
   console.log(option.value);
   main.style.display = "none";
