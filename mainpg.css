@@ -125,15 +125,17 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 800px) {
-  *{
-    border-radius: 8px;
-  }
+
   .section1 .preference {
     width: 80%;
     box-shadow: none;
   }
+  input{
+    border-radius: 8px;
+  }
   .districtSelect{
     width: 100%;
+    border-radius: 8px;
   }
   .section1 .input {
     flex-direction: column;
